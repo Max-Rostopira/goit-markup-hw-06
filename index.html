@@ -513,14 +513,91 @@
             <use href="./imeges/icons.svg/symbol-defs.svg#icon-modal"></use>
           </svg>
         </button>
+        <!--MODAL-->
         <form class="modal-form">
-          <p>Залиште свої дані, ми вам передзвонимо</p>
-          <input class="form-elements" type="text" />
-          <input class="form-elements" type="tel" />
-          <input class="form-elements" type="email" />
-          <textarea class="form-comments" name=""></textarea>
-          <input class="form-check" type="checkbox" />
-          <button class="form-button" type="button">Відправити</button>
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+
+          <label class="form-title" for="user_name">Ім'я</label>
+          <div class="modal-lable-container">
+            <svg class="form-icon" width="12" height="12">
+              <use
+                href="./imeges/icons.svg/symbol-defs.svg#icon-person-black-18dp-1"
+              ></use>
+            </svg>
+            <input
+              class="form-elements"
+              name="user_name"
+              required
+              placeholder="Ім'я"
+              pattern="^[a-zA-Zа-яА-ЯїЇіІ]+$"
+              title="Тільки літери А-Я або A-Z"
+              type="text"
+              id="user_name"
+            />
+          </div>
+
+          <label class="form-title" for="user_tell">Телефон</label>
+          <div class="modal-lable-container">
+            <svg class="form-icon" width="13" height="13">
+              <use
+                href="./imeges/icons.svg/symbol-defs.svg#icon-phone-black-18dp-1"
+              ></use>
+            </svg>
+            <input
+              class="form-elements tell"
+              name="user_tell"
+              required
+              title="Тільки цифри"
+              pattern="^[0-9]+$"
+              placeholder="Телефон"
+              type="tel"
+              id="user_tell"
+            />
+          </div>
+
+          <label class="form-title" for="user_email">Пошта</label>
+          <div class="modal-lable-container">
+            <svg class="form-icon" width="15" height="12">
+              <use
+                href="./imeges/icons.svg/symbol-defs.svg#icon-email-black-18dp-1"
+              ></use>
+            </svg>
+            <input
+              class="form-elements"
+              name="user_email"
+              required
+              placeholder="Електронна пошта"
+              type="email"
+              id="user_email"
+            />
+          </div>
+
+          <label class="form-title" for="user_comments">Коментар</label>
+          <div class="modal-lable-container">
+            <textarea
+              class="form-comments"
+              name="user_comments"
+              placeholder="Введіть текст"
+              id="user_comments"
+            ></textarea>
+          </div>
+
+          <div class="check-container">
+            <input
+              class="form-check"
+              required
+              type="checkbox"
+              id="form_check"
+            />
+            <label class="form-ckeck-text" for="form_check"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="chek-link" href="#">Умови договору</a>
+            </label>
+          </div>
+
+          <button class="form-button" name="agree" type="submit">
+            Відправити
+          </button>
         </form>
       </div>
     </div>
