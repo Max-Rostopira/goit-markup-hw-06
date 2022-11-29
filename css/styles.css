@@ -3,6 +3,8 @@
     --secondary-text-colour: #212121;
     --button-background-colour:#2196F3 ;
     --secondary-button-colour: #FFFFFF;
+    --time-function: 250ms;
+    --bezier-functiion: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -91,7 +93,6 @@ img{
 }
 
 .link-site,
-.link-site-active,
 .link-contact{
     display: block;
     padding-top: 32px;
@@ -127,6 +128,9 @@ img{
     
     font-size: 14px;
     line-height: 1.1;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
     
 }
 
@@ -147,6 +151,9 @@ img{
     background: #2196F3;
     border-radius: 2px;
     bottom: -1px;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .link-site:hover,
@@ -163,6 +170,9 @@ img{
     line-height: 1.1;
     font-weight: 500;
     color: var(--primary-text-colour);
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .link-contact:hover,
@@ -243,6 +253,9 @@ img{
     cursor: pointer;
     border-radius: 5px ;
     color:var(--secondary-button-colour);
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 
@@ -422,6 +435,7 @@ img{
 }
 
 .cotiale-link{
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -429,6 +443,9 @@ img{
     height: 44px;
     border-radius: 50%;
     background-color: var(--secondary-button-colour);
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 
@@ -439,6 +456,9 @@ img{
 
 .cotiale-icon{
     fill: #AFB1B8;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .cotiale-link:hover .cotiale-icon,
@@ -466,6 +486,9 @@ img{
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .clients-list{
@@ -483,6 +506,9 @@ img{
     border-radius: 4px;
     width: 170px;
     height: 92px;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .clients-link:hover,
@@ -531,6 +557,9 @@ fill: var(--button-background-colour);
     line-height:1.7;
     color: var(--secondary-button-colour);
 
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
+
 }
 .adress-title:hover,
 .adress-title:focus{
@@ -546,6 +575,9 @@ fill: var(--button-background-colour);
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .foter-link-contact:hover,
@@ -579,6 +611,9 @@ fill: var(--button-background-colour);
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
     
 }
 
@@ -589,7 +624,7 @@ fill: var(--button-background-colour);
 }
 
 .cotiale-footer-icon:hover,
-.cotiale-footer-iconfocus{
+.cotiale-footer-icon:focus{
     fill: white;
 }
 
@@ -667,16 +702,25 @@ fill: var(--button-background-colour);
     text-align: center;
     cursor: pointer;
     letter-spacing: 0.03em;
+
+    transition-duration: var(--time-function);
+    transition-timing-function: var(--bezier-functiion);
+   
 }
 
 .button-portfolio:hover{
     background-color: var(--button-background-colour);
-    color: var(--secondary-button-colour);  
+    color: var(--secondary-button-colour);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
 }
 
 .button-portfolio:focus{
     background-color: var(--button-background-colour);
     color: var(--secondary-button-colour);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .projekt-portfolio{
@@ -754,10 +798,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
    
     
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card:hover .portfolio-overlay::before{
+.portfolio-link:hover .portfolio-overlay::before,
+.portfolio-link:focus .portfolio-overlay::before{
 transform: translateY(0);
 }
 
@@ -771,12 +816,13 @@ transform: translateY(0);
     width: 100vw;
     height: 100vh;
     background: rgba(47, 48, 58, 0.4);
+
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: var(--bezier-functiion);
 }
 
 .modal{
-    padding-left: 41px;
-    padding-right: 39px;
-
     position: absolute;
     width: 528px;
     height: 581px;
@@ -797,14 +843,13 @@ transform: translateY(0);
 
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
+   
 }
 
 .modal-button{
     display: flex;
     margin-top: 8px;
-    
-
+    margin-left: 490px;
 
     cursor: pointer;
 
@@ -814,46 +859,30 @@ transform: translateY(0);
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
 }
+/*================================= FORM ================================*/
 
-/*=========================== FORM ==========================================*/
-
-
-.form{
+.modal-form{
     display: flex;
     flex-direction: column;
     gap: 28px;
+    width: 448px;
 
-    background-color: tomato;
-    
+    padding-top: 2px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.imput{
-    padding-left: 15px;
-
-    width: 448px;
+.form-elements{
     height: 40px;
-    outline: transparent;
-
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
-.imput:hover,
-.imput:focus{
-    border: 1px solid #2196F3;
-    border-radius: 4px;
-}
-
-.comments{
-    outline: none;
     width: 448px;
-    height: 120px;
-    resize: none;
 }
 
-.comments:hover,
-.comments:focus{
-    border: 1px solid #2196F3;
+.form-button{
+    width: 200px;
+    height: 50px;
     border-radius: 4px;
+    background-color: var(--button-background-colour);
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
