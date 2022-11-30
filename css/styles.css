@@ -938,7 +938,12 @@ transform: translateY(0);
 .modal{
     position: absolute;
     width: 528px;
-    height: 581px;
+    
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 41px;
+    padding-right: 39px;
+
     top: 50%;
     left: 50%;
 
@@ -963,9 +968,11 @@ transform: translateY(0);
 }
 
 .modal-button{
-    display: flex;
-    margin-top: 8px;
-    margin-left: 490px;
+    position: absolute;
+    
+    top: 8px;
+    right: 8px;
+
 
     cursor: pointer;
 
@@ -990,14 +997,11 @@ transform: translateY(0);
 /*================================= FORM ================================*/
 
 .modal-form{
-    display: flex;
+    
     flex-direction: column;
 
     width: 100%;
 
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
 }
 
 .form-elements{
@@ -1036,9 +1040,14 @@ transform: translateY(0);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+
     transition-duration: var(--time-function);
-        transition-timing-function: var(--bezier-functiion);
-        transition-duration: background-color, box-shadow;
+    transition-timing-function: var(--bezier-functiion);
+    transition-duration: background-color, box-shadow;
 }
 
 .form-button:hover{
@@ -1062,7 +1071,7 @@ transform: translateY(0);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    outline: none;
+    outline: transparent;
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
@@ -1088,7 +1097,7 @@ transform: translateY(0);
 }
 
 .modal-title{
-    margin-bottom: 12px;
+    
 
     font-weight: 700;
     font-size: 20px;
@@ -1100,7 +1109,7 @@ transform: translateY(0);
 }
 
 .check-container{
-    margin-top: 20px;
+    margin-bottom: 30px;
     
 }
 
@@ -1126,8 +1135,14 @@ transform: translateY(0);
 
 .modal-lable-container{
     position: relative;
+}
 
-    
+.modal-lable-container:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.modal-lable-container:last-child{
+    margin-bottom: 20px;
 }
 
 .form-icon{
@@ -1178,5 +1193,12 @@ transform: translateY(0);
     background-repeat: no-repeat;
     background-position: center;
 
+}
+.chek-link{
+    margin-left: 7px;
+}
+
+.chek-link:visited{
+    color: var(--button-background-colour);
 }
 
