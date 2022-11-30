@@ -539,8 +539,8 @@
         <form class="modal-form">
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
-          <label class="form-title" for="user_name">Ім'я</label>
           <div class="modal-lable-container">
+            <label class="form-title" for="user_name">Ім'я</label>
             <input
               class="form-elements"
               name="user_name"
@@ -558,13 +558,8 @@
             </svg>
           </div>
 
-          <label class="form-title" for="user_tell">Телефон</label>
           <div class="modal-lable-container">
-            <svg class="form-icon" width="13" height="13">
-              <use
-                href="./imeges/icons.svg/symbol-defs.svg#icon-phone-blackdp"
-              ></use>
-            </svg>
+            <label class="form-title" for="user_tell">Телефон</label>
             <input
               class="form-elements"
               name="user_tell"
@@ -575,15 +570,15 @@
               type="tel"
               id="user_tell"
             />
-          </div>
-
-          <label class="form-title" for="user_email">Пошта</label>
-          <div class="modal-lable-container">
-            <svg class="form-icon" width="15" height="12">
+            <svg class="form-icon" width="13" height="13">
               <use
-                href="./imeges/icons.svg/symbol-defs.svg#icon-email-blackdp"
+                href="./imeges/icons.svg/symbol-defs.svg#icon-phone-blackdp"
               ></use>
             </svg>
+          </div>
+
+          <div class="modal-lable-container">
+            <label class="form-title" for="user_email">Пошта</label>
             <input
               class="form-elements"
               name="user_email"
@@ -592,10 +587,15 @@
               type="email"
               id="user_email"
             />
+            <svg class="form-icon" width="15" height="12">
+              <use
+                href="./imeges/icons.svg/symbol-defs.svg#icon-email-blackdp"
+              ></use>
+            </svg>
           </div>
 
-          <label class="form-title" for="user_comments">Коментар</label>
           <div class="modal-lable-container">
+            <label class="form-title" for="user_comments">Коментар</label>
             <textarea
               class="form-comments"
               name="user_comments"
