@@ -710,7 +710,8 @@ fill: var(--button-background-colour);
     transition-duration: border;
 }
 
-.footer-elements:hover{
+.footer-elements:hover,
+.footer-elements:focus{
     border: 1px solid var(--button-background-colour);
 }
 
@@ -969,7 +970,7 @@ transform: translateY(0);
 
 .modal-button{
     position: absolute;
-    
+    display: flex;
     top: 8px;
     right: 8px;
 
@@ -984,7 +985,7 @@ transform: translateY(0);
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
-    transition-duration: fill;
+    transition-property: fill;
 }
 
 .modal-button:hover,
