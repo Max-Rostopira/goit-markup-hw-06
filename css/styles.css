@@ -1050,16 +1050,18 @@ transform: translateY(0);
 }
 
 .check-container{
-    display: flex;
-
     margin-top: 20px;
+    
 }
 
 .form-ckeck-text{
+    display: inline-block;
+    align-items: center;
 
     margin-left: 7px;
+    
 
-    font-weight: 400;
+   font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;    
@@ -1091,3 +1093,24 @@ transform: translateY(0);
 .modal-lable-container:hover .form-icon{
    fill: var(--button-background-colour) ;
 }
+
+.castom-checkbox{
+    display:inline-block;
+    
+    
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+         
+}
+
+.form-check:checked + .form-ckeck-text .castom-checkbox{
+    border-color: transparent;
+    background-color: var(--button-background-colour);
+    background-image: url(../imeges/icons.svg/ok.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
