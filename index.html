@@ -504,8 +504,30 @@
             </li>
           </ul>
         </div>
+        <!--FOOTER MODAL-->
+        <div class="footer-modal-container">
+          <p class="footer-modal-title">ПІДПИЩІТЬСЯ НА РОЗСИЛКУ</p>
+          <form class="footer-form">
+            <input
+              class="footer-elements"
+              type="email"
+              name="footer_email"
+              placeholder="E-mail"
+            />
+            <button class="footer-button" type="submit">
+              Підписатися
+              <svg class="footer-modal-icon" width="24" height="24">
+                <use
+                  href="./imeges/icons.svg/symbol-defs.svg#icon-telegram"
+                ></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!--BACKDROP MODAL-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-button" type="button" data-modal-close>
@@ -513,17 +535,12 @@
             <use href="./imeges/icons.svg/symbol-defs.svg#icon-modal"></use>
           </svg>
         </button>
-        <!--MODAL-->
+        <!--MODAL FORM-->
         <form class="modal-form">
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
           <label class="form-title" for="user_name">Ім'я</label>
           <div class="modal-lable-container">
-            <svg class="form-icon" width="12" height="12">
-              <use
-                href="./imeges/icons.svg/symbol-defs.svg#icon-person-black-18dp-1"
-              ></use>
-            </svg>
             <input
               class="form-elements"
               name="user_name"
@@ -534,17 +551,22 @@
               type="text"
               id="user_name"
             />
+            <svg class="form-icon" width="12" height="12">
+              <use
+                href="./imeges/icons.svg/symbol-defs.svg#icon-person-blackdp"
+              ></use>
+            </svg>
           </div>
 
           <label class="form-title" for="user_tell">Телефон</label>
           <div class="modal-lable-container">
             <svg class="form-icon" width="13" height="13">
               <use
-                href="./imeges/icons.svg/symbol-defs.svg#icon-phone-black-18dp-1"
+                href="./imeges/icons.svg/symbol-defs.svg#icon-phone-blackdp"
               ></use>
             </svg>
             <input
-              class="form-elements tell"
+              class="form-elements"
               name="user_tell"
               required
               title="Тільки цифри"
@@ -559,7 +581,7 @@
           <div class="modal-lable-container">
             <svg class="form-icon" width="15" height="12">
               <use
-                href="./imeges/icons.svg/symbol-defs.svg#icon-email-black-18dp-1"
+                href="./imeges/icons.svg/symbol-defs.svg#icon-email-blackdp"
               ></use>
             </svg>
             <input
